@@ -1,13 +1,10 @@
 import React from 'react';
 import { expect } from 'chai';
-import Enzyme, { shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
 import App from '../src/components/App';
 import TweetWall from '../src/components/TweetWall';
-
-Enzyme.configure({ adapter: new Adapter() })
 
 describe('App', () => {
   const fetchTweetsStub = sinon.stub();
@@ -63,7 +60,7 @@ describe('TweetWall', () => {
 
   it('does not rerender when there are no new tweets', () => {
     const spy = sinon.spy(TweetWall.prototype, 'render')
-    const wrapper = shallow(<TweetWall newTweets={[]}  />);
+    const wrapper = shallow(<TweetWall newTweets={['I am a tweet!']}  />);
     wrapper.setProps({ newTweets: [] });
     expect(spy).to.have.property('callCount', 1)
   });

@@ -1,3 +1,4 @@
+
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
@@ -43,8 +44,8 @@ jspm_packages
 .results.json
 bundle.js
 
-# Yarn Lockfile 
-yarn.lock 
+# Yarn Lockfile
+yarn.lock
 
-# DS_Store 
+# DS_Store
 .DS_Store
